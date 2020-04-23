@@ -12,11 +12,11 @@ function my_theme_enqueue_styles() {
     );
 } 
 
-// function recipe_titles($title, $id=null){
-//     if(in_category('recupes', $id)) {
-//         $title = $title;
-//     }
-//     return $title;
-// }
+function recipe_titles($title, $id=null){
+    if(in_category('recupes', $id)) {
+        $title = $title;
+    }
+    return $title;
+}
 
-// add_filter('the_title', 'recipe_titles', 10, 2);
+add_filter('the_title', 'recipe_titles', 10, 2);
